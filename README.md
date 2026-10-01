@@ -1,4 +1,4 @@
-# GemCTF — LLM Security Capture the Flag
+# GemCTF: LLM Security Capture the Flag
 
 A Gandalf-style CTF where each level has an AI guardian protecting a secret passphrase. Your goal: make the AI reveal it through creative prompting.
 
@@ -8,11 +8,11 @@ A Gandalf-style CTF where each level has an AI guardian protecting a secret pass
 
 ## What This Teaches
 
-Each level demonstrates a real prompt injection / extraction technique mapped to [OWASP LLM01](https://owasp.org/www-project-top-10-for-large-language-model-applications/):
+Each level demonstrates a real prompt injection or extraction technique. In the OWASP Top 10 for LLM Applications v1.1 these are LLM01 (Prompt Injection) and LLM06 (Sensitive Information Disclosure). In the 2025 list, extracting a system prompt has its own entry, LLM07 (System Prompt Leakage). See the [OWASP project page](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
 
-| Level | Name | Defense | Technique to Learn |
+| Level | Name | Defense | Technique to learn |
 |-------|------|---------|-------------------|
-| 1 | Open Door | None | Baseline — ask directly |
+| 1 | Open Door | None | Baseline: ask directly |
 | 2 | The First Lock | Basic secrecy instruction | Indirect extraction |
 | 3 | Roleplay Bypass | Explicit refusal | Fictional framing, encoding |
 | 4 | The Warden | Multi-rule prohibition | Gap analysis, training data |
@@ -47,15 +47,24 @@ Type `hint` for a nudge. Type `quit` to exit.
 ## Learning Path
 
 After completing GemCTF, explore:
-- [Lakera Gandalf](https://gandalf.lakera.ai) — the original LLM CTF
-- [HackAPrompt](https://www.hackaprompt.com) — competitive prompt injection
+- [Lakera Gandalf](https://gandalf.lakera.ai): the original LLM CTF
+- [HackAPrompt](https://www.hackaprompt.com): competitive prompt injection
 - [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-- [MITRE ATLAS AML.T0051](https://atlas.mitre.org/techniques/AML.T0051) — LLM prompt injection
+- [MITRE ATLAS AML.T0051](https://atlas.mitre.org/techniques/AML.T0051): LLM prompt injection
 
 ## For Trainers / Red Teams
 
-Use `--solve-mode` to see all secret passphrases and solution hints.
+Use `--solve-mode` to see every secret passphrase, defense and hint.
 Swap the `secret` and `system_prompt` fields in `LEVELS` to build your own custom challenges for team training exercises.
+
+## Tests
+
+```bash
+pip install pytest
+pytest
+```
+
+The tests use a stub client, so they need no network or API key.
 
 ## Ethics
 
