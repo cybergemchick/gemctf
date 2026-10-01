@@ -8,7 +8,7 @@ A Gandalf-style CTF where each level has an AI guardian protecting a secret pass
 
 ## What This Teaches
 
-Each level demonstrates a real prompt injection or extraction technique. In the OWASP Top 10 for LLM Applications v1.1 these are LLM01 (Prompt Injection) and LLM06 (Sensitive Information Disclosure). In the 2025 list, extracting a system prompt has its own entry, LLM07 (System Prompt Leakage). See the [OWASP project page](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
+Each level demonstrates a real prompt injection or extraction technique. In the OWASP Top 10 for LLM Applications (2025 edition) these map to LLM01 Prompt Injection and LLM07 System Prompt Leakage. See the [OWASP project page](https://genai.owasp.org/llm-top-10/).
 
 | Level | Name | Defense | Technique to learn |
 |-------|------|---------|-------------------|
@@ -49,7 +49,7 @@ Type `hint` for a nudge. Type `quit` to exit.
 After completing GemCTF, explore:
 - [Lakera Gandalf](https://gandalf.lakera.ai): the original LLM CTF
 - [HackAPrompt](https://www.hackaprompt.com): competitive prompt injection
-- [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/)
 - [MITRE ATLAS AML.T0051](https://atlas.mitre.org/techniques/AML.T0051): LLM prompt injection
 
 ## For Trainers / Red Teams
